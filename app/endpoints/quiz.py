@@ -9,9 +9,10 @@ from app import schema
 
 urlpatterns = [
     path(
-        route='graphql/',
+        route='quiz/',
         view=GraphQLView.as_view(
             graphiql=True,
-            schema=schema.books.schema)
+            schema=schema.quiz.schema,
+        )
     ),
 ]
